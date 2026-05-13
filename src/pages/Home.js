@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import '../App.css';
 
 const pages = [
   { to: '/character-design', emoji: '🎨', label: 'Character Design' },
@@ -10,7 +11,7 @@ function Home() {
   return (
     <div>
       <h1 style={{ marginLeft: '2rem' }}>Home</h1>
-      <div style={{ display: 'flex', justifyContent: 'center', gap: '4rem', marginTop: '4rem' }}>
+      <div className="home-links">
         {pages.map(({ to, emoji, label }) => (
           <Link key={to} to={to} style={{ textDecoration: 'none', textAlign: 'center' }}>
             <div style={{ fontSize: '4rem' }}>{emoji}</div>
