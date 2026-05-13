@@ -1,22 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Paintings from './pages/Paintings';
-import Illustrations from './pages/Illustrations';
-import Contact from './pages/Contact';
-
+import Home from './pages/Home';
+import CharacterDesign from './pages/CharacterDesign';
+import BookIllustrations from './pages/BookIllustrations';
+import About from './pages/About';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Paintings />} />
-        <Route path="/illustrations" element={<Illustrations />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/character-design" element={<CharacterDesign />} />
+        <Route path="/book-illustrations" element={<BookIllustrations />} />
+        <Route path="/about" element={<About />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

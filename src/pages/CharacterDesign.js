@@ -2,19 +2,19 @@ import { useState, useEffect } from 'react';
 import ArtworkCarousel from '../components/ArtworkCarousel';
 import { fetchArtworkByCategory } from '../services/api';
 
-function Illustrations() {
+function CharacterDesign() {
   const [artworks, setArtworks] = useState([]);
 
   useEffect(() => {
-    fetchArtworkByCategory('illustrations').then(setArtworks);
+    fetchArtworkByCategory('character-design').then(setArtworks);
   }, []);
 
   return (
     <div>
-      <h1 style={{ marginLeft: '2rem' }}>Illustrations</h1>
+      <h1 style={{ marginLeft: '2rem' }}>Character Design</h1>
       {artworks.length > 0 ? <ArtworkCarousel artworks={artworks} /> : <p style={{ textAlign: 'center' }}>Loading...</p>}
     </div>
   );
 }
 
-export default Illustrations
+export default CharacterDesign
