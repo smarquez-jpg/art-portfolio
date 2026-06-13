@@ -11,6 +11,8 @@ const links = [
 const linkStyle = ({ isActive }) => ({
   textDecoration: 'none',
   fontWeight: isActive ? 'bold' : 'normal',
+  textShadow: '1px 1px 4px rgba(0,0,0,0.8)',
+  color: 'white',
 });
 
 function Navbar() {
@@ -28,7 +30,7 @@ function Navbar() {
   }, [location]);
 
   return (
-    <nav ref={navRef} style={{ position: 'relative', display: 'flex', justifyContent: 'flex-start', gap: '2rem', padding: '1rem 2rem' }}>
+    <nav ref={navRef} style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100, display: 'flex', justifyContent: 'flex-start', gap: '2rem', padding: '1rem 2rem', backgroundColor: 'transparent' }}>
       {links.map(({ to, label, end }) => (
         <NavLink key={to} to={to} end={end} style={linkStyle}>{label}</NavLink>
       ))}

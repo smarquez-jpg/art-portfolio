@@ -16,7 +16,6 @@ function ArtworkCarousel({ artworks }) {
       {artworks.map((art) => (
         <div key={art.id}>
           <img src={art.imageUrl} alt={art.title} style={{ width: '100%', maxHeight: '600px', objectFit: 'contain' }} />
-          <p style={{ textAlign: 'center' }}>{art.title}</p>
         </div>
       ))}
     </Slider>

@@ -10,7 +10,7 @@ const pages = [
 function Home() {
   return (
     <div>
-      <h1 style={{ marginLeft: '2rem' }}>Home</h1>
+      <h1 style={{ marginLeft: '2rem', color: 'white', textShadow: '1px 1px 4px rgba(0,0,0,0.8)' }}>Home</h1>
       <div className="home-links">
         {pages.map(({ to, emoji, label }) => (
           <Link key={to} to={to} style={{ textDecoration: 'none', textAlign: 'center' }}>
